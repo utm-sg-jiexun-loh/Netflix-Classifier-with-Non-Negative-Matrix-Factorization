@@ -40,15 +40,21 @@ Example of 5 catagories
 school life
 
 ![topic: school life](topic0.png)
+
 family
 
 ![topic: family](topic1.png)
+
 war documentaries
 
 ![topic: war documentaries](topic2.png)
+
 romance
-png)
+
+![topic: romance](topic3.png)
+
 adventure/ new york
+
 ![topic: adventure/ new york](topic4.png)
 
 
