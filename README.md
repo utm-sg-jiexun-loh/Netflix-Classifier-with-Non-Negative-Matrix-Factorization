@@ -20,6 +20,8 @@ This script is intended to generate a CSV file that contains the top words and t
 2. Install the required libraries by running:
    ```
    pip install pandas scikit-learn
+   pip install wordcloud
+   pip install matplotlib
    ```
 3. Place your CSV file (e.g., `netflix_titles.csv`) in the project directory or update the file path in `optim.py` accordingly.
 
@@ -33,6 +35,10 @@ This script is intended to generate a CSV file that contains the top words and t
    ```
    python generate_topics_csv.py
    ```
+
+Example of 5 catagories
+
+![first topic](topic1.png)
 
 ## License
 This project is licensed under the MIT License.
