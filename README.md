@@ -37,8 +37,12 @@ This script is intended to generate a CSV file that contains the top words and t
    ```
 
 Example of 5 catagories
+![topic: school life](topic0.png)
+![topic: family](topic1.png)
+![topic: war documentaries](topic2.png)
+![topic: romance](topic3.png)
+![topic: adventure/ new york](topic4.png)
 
-![first topic](topic1.png)
 
 ## License
 This project is licensed under the MIT License.
