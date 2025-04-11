@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from sklearn.decomposition import NMF
 
-npr = pd.read_csv("netflix_titles.csv") ## input your csv here, and the path tot he csv eg "C://.... .csv"
+npr = pd.read_csv("./data/netflix_titles.csv") ## input your csv here, and the path tot he csv eg "C://.... .csv"
 npr['description']
 print(npr.columns) # this prints the columns within the csv, select the description/summary or text column.
 npr.head() # prints the top 5 entries of the whole data frame
@@ -12,11 +12,13 @@ tfidf = TfidfVectorizer(max_df=0.95,min_df = 2, stop_words= 'english', lowercase
 dtm= tfidf.fit_transform(npr['description']) ## if you want to use a different csv, change 'description' to
 ## a different column name of the csv 
 
+print(dtm)
 
-nmf_model = NMF(n_components= 5) ## model classifies it into differnt components based on the number you choose,
+nmf_model = NMF(n_components= 6) ## model classifies it into differnt components based on the number you choose,
 #in this case components is 4
 nmf_model.fit(dtm)
 
+print(nmf_model.reconstruction_err_)
 
 # Viewing top 15 words in each topic
 for index, topic in enumerate(nmf_model.components_):

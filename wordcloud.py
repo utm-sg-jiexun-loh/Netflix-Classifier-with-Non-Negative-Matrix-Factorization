@@ -3,7 +3,7 @@ from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 
 # Load the CSV file
-topics_df = pd.read_csv('top_words_by_topic.csv')
+topics_df = pd.read_csv('./data/top_words_by_topic.csv')
 
 # Path to the font file (update this path to the font you want to use)
 font_path = 'C:/Windows/Fonts/bahnschrift.ttf'  # Example: Arial font on Windows
@@ -25,5 +25,5 @@ for i in range(1, (len(topics_df.columns) // 2) + 1):
     plt.title(f'Word Cloud for Topic {i}')
 
     # Save the plot as an image
-    plt.savefig(f'topic{i - 1}.png', format='png', dpi=300)
+    plt.savefig(f'./imgdata/topic{i - 1}.png', format='png', dpi=300)
     plt.close()  # Close the figure to avoid overlapping plots

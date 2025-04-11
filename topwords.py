@@ -3,7 +3,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import NMF
 
 # Load the data
-npr = pd.read_csv("netflix_titles.csv")
+npr = pd.read_csv("./data/netflix_titles.csv")
 tfidf = TfidfVectorizer(max_df=0.95, min_df=2, stop_words='english', lowercase=True, strip_accents='ascii')
 dtm = tfidf.fit_transform(npr['description'])
 
@@ -22,4 +22,5 @@ for index, topic in enumerate(nmf_model.components_):
 
 # Create a DataFrame and save to CSV
 topics_df = pd.DataFrame(topics_data)
-topics_df.to_csv('top_words_by_topic.csv', index=False)
+topics_df.to_csv('./data/top_words_by_topic.csv', index=False)
+
