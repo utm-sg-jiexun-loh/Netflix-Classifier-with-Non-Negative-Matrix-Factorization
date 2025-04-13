@@ -14,6 +14,8 @@ from nltk.tokenize import word_tokenize
 # # Ensure NLTK resources are downloaded
 # nltk.download('wordnet')
 # nltk.download('stopwords')
+# nltk.download('punkt_tab')
+# nltk.download('averaged_perceptron_tagger_eng')
 ##### uncomment the above lines if you need to install the libraries
 # Helper function to map NLTK POS tags to WordNet POS tags
 def preprocess_text(text):
